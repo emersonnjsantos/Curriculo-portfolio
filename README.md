@@ -28,7 +28,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
   ![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit) ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ## Experiência
   - Desenvolvi funcionalidades em Python e Flutter.
-- **Free-Lancer* (2023 - 2025)
+- ** projetos Universitários* (2023 - 2025)
 
 ## Educação
 - Analista e Desenvolvedor de Sistemas, Universidade Cruzeiro do Sul (2023 - 2025)
