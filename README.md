@@ -15,13 +15,12 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 - Frameworks: React,Dart, Django
 
 ## Projetos
-- **[Projeto X](https://github.com/joaosilva/projeto-x)**: Descrição breve.
-- **[Projeto Y](https://github.com/joaosilva/projeto-y)**: Descrição breve.
+- **[Projeto X](https://github.com/emersonnjsantos/langchain_ask_images)**: Agentes de Ia em Python.
+- **[Projeto Y](https://github.com/emersonnjsantos/RPA_Automacao)**: Automação em Python.
 
 ## Experiência
-- **Desenvolvedor na Empresa Z** (2022 - Presente)
   - Desenvolvi funcionalidades em Python e Flutter.
-- **Free Lancer* (2020 - 2024)
+- **Free Lancer* (2023 - 2025)
 
 ## Educação
 - Analista e Desenvolvedor de Sistemas, Universidade Cruzeiro do Sul (2023 - 2025)
