@@ -1,4 +1,4 @@
-# curriculo
+# currículo
 
 # Emerson N J Santos
 
