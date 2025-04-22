@@ -33,8 +33,9 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 ## Projetos
 - **[Projeto Agentes IA](https://github.com/emersonnjsantos/langchain_ask_images)**: Agentes de Ia em Python.
 - **[Projeto Automação](https://github.com/emersonnjsantos/RPA_Automacao)**: Automação em Python.
-- **[Dashboard de Dados](https://github.com/emersonnjsantos/dashboard)**  
-  Dashboard interativo com Streamlit para visualização de dados.  
+- 
+- **[Dashboard de Dados](https://github.com/emersonnjsantos/langchain_ask_images)**  
+    
   ![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit) ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ## Experiência
   - Desenvolvi funcionalidades em Python e Flutter.
