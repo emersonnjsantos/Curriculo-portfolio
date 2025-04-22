@@ -10,6 +10,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 - GitHub: [https://github.com/emersonnjsantos)]
 
 ## Habilidades
+![Selenium](https://img.shields.io/badge/Selenium-4+-green)
 - Linguagens: Python, JavaScript, Java
 - Ferramentas: Docker, Git,Flutter
 - Frameworks: React,Dart, Django
