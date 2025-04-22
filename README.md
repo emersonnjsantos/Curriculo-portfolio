@@ -15,8 +15,8 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 - Frameworks: React,Dart, Django
 
 ## Projetos
-- **[Projeto X](https://github.com/emersonnjsantos/langchain_ask_images)**: Agentes de Ia em Python.
-- **[Projeto Y](https://github.com/emersonnjsantos/RPA_Automacao)**: Automação em Python.
+- **[Projeto Agentes IA](https://github.com/emersonnjsantos/langchain_ask_images)**: Agentes de Ia em Python.
+- **[Projeto Automação](https://github.com/emersonnjsantos/RPA_Automacao)**: Automação em Python.
 
 ## Experiência
   - Desenvolvi funcionalidades em Python e Flutter.
