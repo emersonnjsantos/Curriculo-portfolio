@@ -1,4 +1,4 @@
-![Emerson N J Santos - Currículo](assets/thumbnail.png)
+
 
 # Emerson N J Santos
 
