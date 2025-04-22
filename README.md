@@ -11,10 +11,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 
 ## 🛠 Habilidades
 - **Linguagens**:  
-  ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)  
-  ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)  
-  ![Java](https://img.shields.io/badge/Java-17+-orange?logo=java)  
-  ![Dart](https://img.shields.io/badge/Dart-3+-blue?logo=dart)  
+  ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)  ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)  ![Java](https://img.shields.io/badge/Java-17+-orange?logo=java)  ![Dart](https://img.shields.io/badge/Dart-3+-blue?logo=dart)  
 - **Frameworks e Bibliotecas**:  
   ![Flutter](https://img.shields.io/badge/Flutter-3+-cyan?logo=flutter)  
   ![React](https://img.shields.io/badge/React-18+-blue?logo=react)  
