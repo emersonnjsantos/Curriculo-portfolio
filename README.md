@@ -20,9 +20,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
   ![Docker](https://img.shields.io/badge/Docker-24+-blue?logo=docker)  ![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github) ![IntelliJ](https://img.shields.io/badge/IntelliJ_IDEA-2023+-black?logo=intellij-idea) ![Sublime Text](https://img.shields.io/badge/Sublime_Text-4+-blue?logo=sublime-text) ![Anaconda Navigator](https://img.shields.io/badge/Anaconda_Navigator-2023+-green?logo=anaconda)
 ![Google Cloud](https://img.shields.io/badge/Google_Cloud-2023+-blue?logo=google-cloud) ![Azure](https://img.shields.io/badge/Azure-2023+-blue?logo=microsoft-azure) ![AWS](https://img.shields.io/badge/AWS-2023+-orange?logo=amazon-aws)
 
-
-
-**Mern Stack**:
+- **Mern Stack**: 
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-4.4-green?style=flat-square&logo=mongodb)
 ![Express](https://img.shields.io/badge/Express-v4.17.1-blue?style=flat-square&logo=express)
