@@ -9,7 +9,9 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 
 ## 🛠 Habilidades
 - **Linguagens**:  
-  ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)  ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)  ![Java](https://img.shields.io/badge/Java-17+-orange?logo=java)  ![Dart](https://img.shields.io/badge/Dart-3+-blue?logo=dart)  ![HTML](https://img.shields.io/badge/HTML-5+-orange?logo=html5)  ![CSS](https://img.shields.io/badge/CSS-3+-blue?logo=css3)  
+  ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)  ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)  ![Java](https://img.shields.io/badge/Java-17+-orange?logo=java)  ![Dart](https://img.shields.io/badge/Dart-3+-blue?logo=dart)  ![HTML](https://img.shields.io/badge/HTML-5+-orange?logo=html5)  ![CSS](https://img.shields.io/badge/CSS-3+-blue?logo=css3)  ![TensorFlow](https://img.shields.io/badge/TensorFlow-v2.10.0-blue?style=flat-square&logo=tensorflow) ![PyTorch](https://img.shields.io/badge/PyTorch-v1.11.0-red?style=flat-square&logo=pytorch)
+
+
 - **Frameworks e Bibliotecas**:  
   ![Flutter](https://img.shields.io/badge/Flutter-3+-cyan?logo=flutter)  ![React](https://img.shields.io/badge/React-18+-blue?logo=react)  ![Django](https://img.shields.io/badge/Django-4+-green?logo=django)  ![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit)  ![LangChain](https://img.shields.io/badge/LangChain-0.2+-orange)  ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4+-green)  ![Bootstrap](https://img.shields.io/badge/Bootstrap-5+-purple?logo=bootstrap)  
 - **Bancos de Dados**:  
