@@ -23,6 +23,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 
 
 **Mern Stack**:
+
 ![MongoDB](https://img.shields.io/badge/MongoDB-4.4-green?style=flat-square&logo=mongodb)
 ![Express](https://img.shields.io/badge/Express-v4.17.1-blue?style=flat-square&logo=express)
 ![React](https://img.shields.io/badge/React-v17.0.2-blue?style=flat-square&logo=react)
