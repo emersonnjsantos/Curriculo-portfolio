@@ -41,4 +41,5 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 ## Educação
 - Analista e Desenvolvedor de Sistemas, Universidade Cruzeiro do Sul (2023 - 2025)
 
-- https://img.shields.io/badge/WhatsApp-25D366.svg?style=for-the-badge&logo=WhatsApp&logoColor=white  (45)998031634
+- ![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366.svg?style=for-the-badge&logo=WhatsApp&logoColor=white)
+  (45)998031634
