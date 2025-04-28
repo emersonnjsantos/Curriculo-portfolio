@@ -18,8 +18,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
   ![MongoDB](https://img.shields.io/badge/MongoDB-6+-green?logo=mongodb)  ![MySQL](https://img.shields.io/badge/MySQL-8+-blue?logo=mysql)  ![Firebase](https://img.shields.io/badge/Firebase-10+-yellow?logo=firebase)  
 - **Ferramentas**:  
   ![Docker](https://img.shields.io/badge/Docker-24+-blue?logo=docker)  ![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github) ![IntelliJ](https://img.shields.io/badge/IntelliJ_IDEA-2023+-black?logo=intellij-idea) ![Sublime Text](https://img.shields.io/badge/Sublime_Text-4+-blue?logo=sublime-text) ![Anaconda Navigator](https://img.shields.io/badge/Anaconda_Navigator-2023+-green?logo=anaconda)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-2023+-blue?logo=google-cloud) ![Azure](https://img.shields.io/badge/Azure-2023+-blue?logo=microsoft-azure) ![AWS](https://img.shields.io/badge/AWS-2023+-orange?logo=amazon-aws)  ![Sublime Text](https://img.shields.io/badge/Sublime%20Text-FF9800.svg?style=for-the-badge&logo=Sublime-Text&logoColor=white)
-
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-2023+-blue?logo=google-cloud) ![Azure](https://img.shields.io/badge/Azure-2023+-blue?logo=microsoft-azure) ![AWS](https://img.shields.io/badge/AWS-2023+-orange?logo=amazon-aws)  
 
 - **Mern Stack**:
 - ![MongoDB](https://img.shields.io/badge/MongoDB-4.4-green?style=flat-square&logo=mongodb)
@@ -42,8 +41,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 ## Educação
 - Analista e Desenvolvedor de Sistemas, Universidade Cruzeiro do Sul (2023 - 2025)
 
-- ![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366.svg?style=for-the-badge&logo=WhatsApp&logoColor=white)  ![ASUS](https://img.shields.io/badge/ASUS-000000.svg?style=for-the-badge&logo=ASUS&logoColor=white)  ![Apple](https://img.shields.io/badge/Apple-000000.svg?style=for-the-badge&logo=Apple&logoColor=white)  ![Acer](https://img.shields.io/badge/Acer-83B81A.svg?style=for-the-badge&logo=Acer&logoColor=white) ![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=for-the-badge&logo=Intel&logoColor=white)  ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000.svg?style=for-the-badge&logo=IntelliJ-IDEA&logoColor=white)  ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E.svg?style=for-the-badge&logo=Hugging-Face&logoColor=black)
-
+-   ![ASUS](https://img.shields.io/badge/ASUS-000000.svg?style=for-the-badge&logo=ASUS&logoColor=white)  ![Apple](https://img.shields.io/badge/Apple-000000.svg?style=for-the-badge&logo=Apple&logoColor=white)  ![Acer](https://img.shields.io/badge/Acer-83B81A.svg?style=for-the-badge&logo=Acer&logoColor=white) ![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=for-the-badge&logo=Intel&logoColor=white)  ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000.svg?style=for-the-badge&logo=IntelliJ-IDEA&logoColor=white)  
 
 
 
