@@ -41,7 +41,8 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 ## Educação
 - Analista e Desenvolvedor de Sistemas, Universidade Cruzeiro do Sul (2023 - 2025)
 
--   ![ASUS](https://img.shields.io/badge/ASUS-000000.svg?style=for-the-badge&logo=ASUS&logoColor=white)  ![Apple](https://img.shields.io/badge/Apple-000000.svg?style=for-the-badge&logo=Apple&logoColor=white)  ![Acer](https://img.shields.io/badge/Acer-83B81A.svg?style=for-the-badge&logo=Acer&logoColor=white) ![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=for-the-badge&logo=Intel&logoColor=white)  ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000.svg?style=for-the-badge&logo=IntelliJ-IDEA&logoColor=white)  
+-   ![ASUS](https://img.shields.io/badge/ASUS-000000.svg?style=for-the-badge&logo=ASUS&logoColor=white)  ![Apple](https://img.shields.io/badge/Apple-000000.svg?style=for-the-badge&logo=Apple&logoColor=white)  ![Acer](https://img.shields.io/badge/Acer-83B81A.svg?style=for-the-badge&logo=Acer&logoColor=white) ![Intel](https://img.shields.io/badge/Intel-0071C5.svg?style=for-the-badge&logo=Intel&logoColor=white)
+-    
 
 
 
