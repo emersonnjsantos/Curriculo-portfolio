@@ -33,7 +33,16 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 - **[Dashboard de Dados](https://github.com/emersonnjsantos/langchain_ask_images)**  
   ![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit)  
   ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
-  **[Projeto aplicativo flutter Broadcastingr](https://github.com/emersonnjsantos/app_broadcasting_flutter**
+
+  ### 📱 Aplicativos Flutter
+
+- **[App Broadcasting](https://github.com/emersonnjsantos/app_broadcasting_flutter)**: Projeto Flutter utilizando transmissão de dados com gerenciamento de estado.
+- **[Bitcoin Price](https://github.com/emersonnjsantos/bitcoim_price_flutter)**: Consulta em tempo real do preço do Bitcoin.
+- **[Calcula Fuel](https://github.com/emersonnjsantos/calcula_fuel_flutter)**: Calculadora para decidir entre álcool ou gasolina.
+- **[Aprenda Inglês](https://github.com/emersonnjsantos/aprenda_ingles_flutter)**: App educativo para aprender inglês com frases.
+- **[Frases Diárias](https://github.com/emersonnjsantos/app_frases_diarias_Flutter)**: App de frases motivacionais aleatórias.
+- **[Coletânea de Apps Flutter](https://github.com/emersonnjsantos/Futter_apps)**: Repositório com uma  agenda de anotações desenvolvidos em Flutter.
+  
 
 ## Experiência
 - Desenvolvi funcionalidades em Python e Flutter.
