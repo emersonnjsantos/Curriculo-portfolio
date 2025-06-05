@@ -33,6 +33,7 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 - **[Dashboard de Dados](https://github.com/emersonnjsantos/langchain_ask_images)**  
   ![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit)  
   ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
+  **[Projeto aplicativo flutter Broadcastingr](https://github.com/emersonnjsantos/app_broadcasting_flutter**
 
 ## Experiência
 - Desenvolvi funcionalidades em Python e Flutter.
