@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emerson N J Santos - Currículo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 20px;
             background-color: #f4f4f4;
@@ -22,86 +23,158 @@
         h1 {
             color: #2c3e50;
             text-align: center;
+            font-size: 2.8em; /* Increased font size */
+            margin-bottom: 10px; /* Spacing below h1 */
+            padding-bottom: 10px; /* Padding for border */
+            border-bottom: 1px solid #eee; /* Subtle bottom border */
+        }
+        .tagline { /* New class for the tagline paragraph */
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 0; /* Adjusted margin */
+            margin-bottom: 20px; /* Spacing below tagline */
         }
         h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            color: #2980b9; /* Existing text color */
+            font-size: 2em; /* Increased font size */
+            border-bottom: 3px solid #2c3e50; /* Thicker border, new color */
+            padding-bottom: 8px; /* Adjusted padding */
+            margin-top: 40px; /* Added margin for section separation */
+        }
+        .skill-category { /* New class for skill category titles */
+            font-size: 1.1em;
+            font-weight: bold; /* Ensures boldness, good for <p> if <strong> is removed */
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .badges { /* Style for the container of badges */
+            margin-bottom: 20px; /* Space after a block of badges */
         }
         .badges img {
             margin-right: 5px;
             margin-bottom: 5px;
         }
+        .project-list { /* Class for the <ul> in Projects section */
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .project-item { /* Class for <li> project items */
+            margin-bottom: 25px; /* Increased spacing between projects */
+        }
+        .project-title strong { /* Targeting <strong> within .project-title */
+            font-size: 1.3em; /* Larger font for project title */
+            color: #2c3e50; /* Match h1 color for prominence */
+        }
+        .project-description {
+            display: block; /* Ensure it takes its own line */
+            font-size: 0.95em;
+            color: #444; /* Slightly darker than default p */
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .project-badges img { /* Styles for badges within projects */
+            margin-right: 5px;
+            margin-bottom: 5px;
+            /* margin-top: 5px; Implicitly handled by description margin-bottom */
+        }
+        .section-subtitle { /* For <p> under H2 in Experience/Education */
+            font-size: 1.1em; /* Slightly larger */
+            font-weight: bold; /* Already bold via <strong>, but good to have */
+            color: #383838;   /* Darker gray */
+            margin-top: 15px;  /* Space from H2 */
+            margin-bottom: 10px; /* Space to list or next line */
+        }
+        .experience-list { /* For <ul> in Experience section */
+            padding-left: 20px; /* Default is often 40px, reducing a bit */
+            margin-top: 0; /* Remove space if .section-subtitle provides enough */
+        }
+        .experience-list li {
+            margin-bottom: 8px; /* Space between experience points */
+            line-height: 1.5;   /* Improve readability of multi-line items */
+        }
+        /* General p rule - be cautious, might not be needed if all p's are classed */
+        .container p:not([class]) { /* Target p tags without a class */
+            /* margin-bottom: 10px; Let's hold off on this for now */
+            line-height: 1.6; /* General readability for unclassed paragraphs */
+        }
         a {
-            color: #3498db;
+            color: #0066cc; /* Changed to a WCAG AA compliant blue */
             text-decoration: none;
+            transition: color 0.2s ease-in-out; /* Smooth transition for color change */
         }
         a:hover {
-            text-decoration: underline;
+            color: #004c99; /* Darker shade of new blue for hover */
+            /* text-decoration: underline; Removed underline */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>👨‍💻 Emerson N J Santos</h1>
-        <p style="text-align: center;">
+        <p class="tagline">
             Analista e Desenvolvedor Full-Stack apaixonado por tecnologia, automação e inteligência artificial.
         </p>
-        <p style="text-align: center;">
+        <p style="text-align: center; margin-bottom: 30px;"> /* Added margin to badge paragraph */
             <a href="https://www.linkedin.com/in/emer7681/"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin"></a>
             <a href="https://github.com/emersonnjsantos"><img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github"></a>
         </p>
 
         <h2>🛠 Habilidades</h2>
-        <p><strong>Linguagens:</strong></p>
+        <p class="skill-category"><strong>Linguagens:</strong></p>
         <div class="badges">
             <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
             <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript">
             <img src="https://img.shields.io/badge/Dart-3+-blue?logo=dart">
         </div>
-        <p><strong>Frameworks e Bibliotecas:</strong></p>
+        <p class="skill-category"><strong>Frameworks e Bibliotecas:</strong></p>
         <div class="badges">
             <img src="https://img.shields.io/badge/Flutter-3+-cyan?logo=flutter">
             <img src="https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit">
             <img src="https://img.shields.io/badge/LangChain-0.2+-orange">
         </div>
-        <p><strong>Bancos de Dados:</strong></p>
+        <p class="skill-category"><strong>Bancos de Dados:</strong></p>
         <div class="badges">
             <img src="https://img.shields.io/badge/MongoDB-6+-green?logo=mongodb">
             <img src="https://img.shields.io/badge/MySQL-8+-blue?logo=mysql">
             <img src="https://img.shields.io/badge/Firebase-10+-yellow?logo=firebase">
         </div>
-        <p><strong>Ferramentas:</strong></p>
+        <p class="skill-category"><strong>Ferramentas:</strong></p>
         <div class="badges">
             <img src="https://img.shields.io/badge/Docker-24+-blue?logo=docker">
         </div>
 
         <h2>🚀 Projetos</h2>
-        <ul>
-            <li>
-                <strong><a href="https://github.com/emersonnjsantos/langchain_ask_images">Agentes de IA</a></strong><br>
-                Agentes inteligentes em Python com LangChain.<br>
-                <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
-                <img src="https://img.shields.io/badge/LangChain-0.2+-orange">
+        <ul class="project-list">
+            <li class="project-item">
+                <span class="project-title"><strong><a href="https://github.com/emersonnjsantos/langchain_ask_images">Agentes de IA</a></strong></span><br>
+                <span class="project-description">Agentes inteligentes em Python com LangChain.</span>
+                <div class="project-badges">
+                    <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
+                    <img src="https://img.shields.io/badge/LangChain-0.2+-orange">
+                </div>
             </li>
-            <li>
-                <strong><a href="https://github.com/emersonnjsantos/RPA_Automacao">Automação RPA</a></strong><br>
-                Automação de processos com Python e Selenium.<br>
-                <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
-                <img src="https://img.shields.io/badge/Selenium-4+-green">
+            <li class="project-item">
+                <span class="project-title"><strong><a href="https://github.com/emersonnjsantos/RPA_Automacao">Automação RPA</a></strong></span><br>
+                <span class="project-description">Automação de processos com Python e Selenium.</span>
+                <div class="project-badges">
+                    <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
+                    <img src="https://img.shields.io/badge/Selenium-4+-green">
+                </div>
             </li>
         </ul>
 
         <h2>💼 Experiência</h2>
-        <p><strong>Desenvolvedor Freelancer (2023 – 2025)</strong></p>
-        <ul>
+        <p class="section-subtitle"><strong>Desenvolvedor Freelancer (2023 – 2025)</strong></p>
+        <ul class="experience-list">
             <li>Desenvolvi aplicações com Python, Flutter e Streamlit.</li>
             <li>Criei automações RPA e soluções de IA.</li>
         </ul>
 
         <h2>🎓 Educação</h2>
-        <p><strong>Análise e Desenvolvimento de Sistemas</strong><br>
+        <p class="section-subtitle"><strong>Análise e Desenvolvimento de Sistemas</strong><br>
         Universidade Cruzeiro do Sul (2023 – 2025)</p>
+        <!-- The <p> above has line break, so margin-bottom on .section-subtitle will apply after the whole block -->
     </div>
 </body>
 </html>
