@@ -42,6 +42,8 @@ Analista Desenvolvedor Full-Stack apaixonado por tecnologia.
 - **[Aprenda Inglês](https://github.com/emersonnjsantos/aprenda_ingles_flutter)**: App educativo para aprender inglês com frases.
 - **[Frases Diárias](https://github.com/emersonnjsantos/app_frases_diarias_Flutter)**: App de frases motivacionais aleatórias.
 - **[Coletânea de Apps Flutter](https://github.com/emersonnjsantos/Futter_apps)**: Repositório com uma  agenda de anotações desenvolvidos em Flutter.
+- **[App Restaurant Flutter](https://github.com/emersonnjsantos/app_restaurant_flutter)**: Aplicativo de restaurante desenvolvido em Flutter.
+- **[Amanhecer Turismo Agência](https://github.com/emersonnjsantos/amanhecer_turismo_agencia)**: Aplicativo para agência de turismo desenvolvido em Flutter.
   
 
 ## Experiência
