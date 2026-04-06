@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, monospace;
+
+  --color-accent:   #6c63ff;
+  --color-accent2:  #43e97b;
+  --color-dark:     #0f0f1a;
+  --color-card:     #1a1a2e;
+  --color-card2:    #16213e;
+  --color-muted:    #8892a4;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--color-dark);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #fff 30%, var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow animation for avatar */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 40px rgba(108,99,255,.5); }
+  50%       { box-shadow: 0 0 70px rgba(108,99,255,.85); }
+}
+.animate-glow { animation: glow-pulse 3s ease-in-out infinite; }
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Timeline vertical line */
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent);
+}
