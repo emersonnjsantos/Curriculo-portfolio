@@ -39,6 +39,21 @@
         a:hover {
             text-decoration: underline;
         }
+        .edu-entry {
+            border-left: 3px solid #3498db;
+            padding-left: 12px;
+            margin-bottom: 14px;
+        }
+        .edu-entry p {
+            margin: 2px 0;
+        }
+        .edu-entry .period {
+            font-size: 0.85em;
+            color: #666;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -100,10 +115,16 @@
         </ul>
 
         <h2>🎓 Educação</h2>
-        <p><strong>Bacharelado em Ciências da Computação</strong><br>
-        Universidade Cruzeiro do Sul (2025 – 2029)</p>
-        <p><strong>Análise e Desenvolvimento de Sistemas</strong><br>
-        Universidade Cruzeiro do Sul (2023 – 2025)</p>
+        <div class="edu-entry">
+            <p><strong>Bacharelado em Ciências da Computação</strong></p>
+            <p>Universidade Cruzeiro do Sul</p>
+            <p class="period">2025 – 2029 · Em andamento</p>
+        </div>
+        <div class="edu-entry">
+            <p><strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong></p>
+            <p>Universidade Cruzeiro do Sul</p>
+            <p class="period">2023 – 2025 · Concluído</p>
+        </div>
     </div>
 </body>
 </html>
