@@ -3,105 +3,583 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerson N J Santos - Currículo</title>
+    <title>Emerson N J Santos – Desenvolvedor Full-Stack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --accent:    #6c63ff;
+            --accent2:   #43e97b;
+            --dark:      #0f0f1a;
+            --card:      #1a1a2e;
+            --card2:     #16213e;
+            --border:    rgba(108,99,255,.25);
+            --text:      #e2e8f0;
+            --muted:     #8892a4;
+            --radius:    12px;
+        }
+
+        html { scroll-behavior: smooth; }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.65;
+            min-height: 100vh;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
+
+        /* ── HERO ─────────────────────────────────────── */
+        .hero {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
+            padding: 80px 24px 60px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 70% 60% at 50% -10%, rgba(108,99,255,.35) 0%, transparent 70%);
+            pointer-events: none;
         }
-        .badges img {
-            margin-right: 5px;
-            margin-bottom: 5px;
+        .avatar {
+            width: 110px; height: 110px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 48px;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 40px rgba(108,99,255,.5);
+            animation: pulse 3s ease-in-out infinite;
         }
-        a {
-            color: #3498db;
+        @keyframes pulse {
+            0%,100% { box-shadow: 0 0 40px rgba(108,99,255,.5); }
+            50%      { box-shadow: 0 0 60px rgba(108,99,255,.8); }
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 30%, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -.5px;
+        }
+        .hero .subtitle {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            font-weight: 400;
+        }
+        .hero .subtitle span {
+            color: var(--accent2);
+            font-weight: 600;
+        }
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 28px;
+        }
+        .contact-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-size: .9rem;
+            font-weight: 600;
             text-decoration: none;
+            transition: transform .2s, box-shadow .2s;
+            letter-spacing: .3px;
         }
-        a:hover {
-            text-decoration: underline;
+        .contact-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+        .btn-linkedin  { background: #0077b5; color: #fff; }
+        .btn-github    { background: #24292e; color: #fff; border: 1px solid #444; }
+        .btn-email     { background: linear-gradient(135deg, var(--accent), #a78bfa); color: #fff; }
+
+        /* ── LAYOUT ──────────────────────────────────── */
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+        @media (max-width: 780px) {
+            .page { grid-template-columns: 1fr; }
+        }
+
+        /* ── CARD ────────────────────────────────────── */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            margin-bottom: 24px;
+        }
+        .card-title {
+            font-size: .75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            margin-bottom: 18px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .card-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ── SKILL TAGS ───────────────────────────────── */
+        .tag-group { margin-bottom: 14px; }
+        .tag-group-label {
+            font-size: .72rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: .78rem;
+            font-weight: 500;
+            background: rgba(108,99,255,.15);
+            border: 1px solid rgba(108,99,255,.3);
+            color: #c4b5fd;
+            transition: background .2s, transform .2s;
+            cursor: default;
+        }
+        .tag:hover {
+            background: rgba(108,99,255,.3);
+            transform: translateY(-2px);
+        }
+        .tag.green  { background: rgba(67,233,123,.1);  border-color: rgba(67,233,123,.3);  color: #6ee7b7; }
+        .tag.blue   { background: rgba(56,182,255,.1);  border-color: rgba(56,182,255,.3);  color: #93c5fd; }
+        .tag.orange { background: rgba(251,146,60,.1);  border-color: rgba(251,146,60,.3);  color: #fdba74; }
+        .tag.pink   { background: rgba(244,114,182,.1); border-color: rgba(244,114,182,.3); color: #f9a8d4; }
+
+        /* ── TIMELINE ─────────────────────────────────── */
+        .timeline { position: relative; padding-left: 24px; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px; top: 6px; bottom: 6px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), transparent);
+        }
+        .tl-item { position: relative; margin-bottom: 28px; }
+        .tl-item::before {
+            content: '';
+            position: absolute;
+            left: -20px; top: 6px;
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent);
+        }
+        .tl-date {
+            font-size: .75rem;
+            font-weight: 600;
+            color: var(--accent2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .tl-role {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .tl-org {
+            font-size: .85rem;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .tl-desc {
+            font-size: .88rem;
+            color: var(--text);
+        }
+        .tl-desc li { margin-bottom: 4px; list-style: none; padding-left: 16px; position: relative; }
+        .tl-desc li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: .7rem; top: 3px; }
+
+        /* ── PROJECT CARDS ────────────────────────────── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .proj-card {
+            background: var(--card2);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            transition: transform .25s, border-color .25s, box-shadow .25s;
+            position: relative;
+            overflow: hidden;
+        }
+        .proj-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            opacity: 0;
+            transition: opacity .25s;
+        }
+        .proj-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(108,99,255,.55);
+            box-shadow: 0 12px 40px rgba(108,99,255,.2);
+        }
+        .proj-card:hover::before { opacity: 1; }
+        .proj-icon { font-size: 1.8rem; margin-bottom: 10px; }
+        .proj-title {
+            font-size: .98rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .proj-title a { color: #fff; text-decoration: none; }
+        .proj-title a:hover { color: var(--accent2); }
+        .proj-desc {
+            font-size: .82rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .proj-tag {
+            font-size: .7rem;
+            padding: 3px 9px;
+            border-radius: 50px;
+            background: rgba(108,99,255,.15);
+            border: 1px solid rgba(108,99,255,.25);
+            color: #c4b5fd;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* ── EDUCATION ────────────────────────────────── */
+        .edu-item { display: flex; gap: 16px; align-items: flex-start; }
+        .edu-icon {
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .edu-info .degree  { font-size: .98rem; font-weight: 700; }
+        .edu-info .school  { font-size: .85rem; color: var(--muted); margin-top: 2px; }
+        .edu-info .period  { font-size: .78rem; color: var(--accent2); font-weight: 600; margin-top: 4px; letter-spacing: .5px; }
+
+        /* ── CLOUD/TOOLS SECTION ─────────────────────── */
+        .cloud-grid {
+            display: flex; flex-wrap: wrap; gap: 10px;
+        }
+        .cloud-item {
+            display: flex; align-items: center; gap: 6px;
+            padding: 7px 14px;
+            border-radius: 8px;
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.08);
+            font-size: .82rem;
+            color: var(--text);
+            font-weight: 500;
+            transition: background .2s, transform .2s;
+            cursor: default;
+        }
+        .cloud-item:hover { background: rgba(255,255,255,.1); transform: translateY(-2px); }
+        .cloud-item .ci { font-size: 1rem; }
+
+        /* ── FOOTER ───────────────────────────────────── */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: .8rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+
+        /* ── SCROLL ANIMATION ────────────────────────── */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>👨‍💻 Emerson N J Santos</h1>
-        <p style="text-align: center;">
-            Analista e Desenvolvedor Full-Stack apaixonado por tecnologia, automação e inteligência artificial.
+
+    <!-- ══ HERO ══════════════════════════════════════════ -->
+    <header class="hero">
+        <div class="avatar">👨‍💻</div>
+        <h1>Emerson N J Santos</h1>
+        <p class="subtitle">
+            Analista &amp; Desenvolvedor <span>Full-Stack</span> · IA &amp; Automação
         </p>
-        <p style="text-align: center;">
-            <a href="https://www.linkedin.com/in/emer7681/"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin"></a>
-            <a href="https://github.com/emersonnjsantos"><img src="https://img.shields.io/badge/GitHub-Profile-black?logo=github"></a>
-        </p>
-
-        <h2>🛠 Habilidades</h2>
-        <p><strong>Linguagens:</strong></p>
-        <div class="badges">
-            <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
-            <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript">
-            <img src="https://img.shields.io/badge/Dart-3+-blue?logo=dart">
+        <div class="contact-row">
+            <a class="contact-btn btn-linkedin" href="https://www.linkedin.com/in/emer7681/" target="_blank" rel="noopener">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.36h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v5.61z"/></svg>
+                LinkedIn
+            </a>
+            <a class="contact-btn btn-github" href="https://github.com/emersonnjsantos" target="_blank" rel="noopener">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.82 1.1.82 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+            </a>
+            <a class="contact-btn btn-email" href="mailto:emer7681@gmail.com">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                emer7681@gmail.com
+            </a>
         </div>
-        <p><strong>Frameworks e Bibliotecas:</strong></p>
-        <div class="badges">
-            <img src="https://img.shields.io/badge/Flutter-3+-cyan?logo=flutter">
-            <img src="https://img.shields.io/badge/Streamlit-1.20+-red?logo=streamlit">
-            <img src="https://img.shields.io/badge/LangChain-0.2+-orange">
-        </div>
-        <p><strong>Bancos de Dados:</strong></p>
-        <div class="badges">
-            <img src="https://img.shields.io/badge/MongoDB-6+-green?logo=mongodb">
-            <img src="https://img.shields.io/badge/MySQL-8+-blue?logo=mysql">
-            <img src="https://img.shields.io/badge/Firebase-10+-yellow?logo=firebase">
-        </div>
-        <p><strong>Ferramentas:</strong></p>
-        <div class="badges">
-            <img src="https://img.shields.io/badge/Docker-24+-blue?logo=docker">
-        </div>
+    </header>
 
-        <h2>🚀 Projetos</h2>
-        <ul>
-            <li>
-                <strong><a href="https://github.com/emersonnjsantos/langchain_ask_images">Agentes de IA</a></strong><br>
-                Agentes inteligentes em Python com LangChain.<br>
-                <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
-                <img src="https://img.shields.io/badge/LangChain-0.2+-orange">
-            </li>
-            <li>
-                <strong><a href="https://github.com/emersonnjsantos/RPA_Automacao">Automação RPA</a></strong><br>
-                Automação de processos com Python e Selenium.<br>
-                <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python">
-                <img src="https://img.shields.io/badge/Selenium-4+-green">
-            </li>
-        </ul>
+    <!-- ══ MAIN LAYOUT ════════════════════════════════════ -->
+    <div class="page">
 
-        <h2>💼 Experiência</h2>
-        <p><strong>Desenvolvedor Freelancer (2023 – 2025)</strong></p>
-        <ul>
-            <li>Desenvolvi aplicações com Python, Flutter e Streamlit.</li>
-            <li>Criei automações RPA e soluções de IA.</li>
-        </ul>
+        <!-- ── LEFT SIDEBAR ──────────────────────────── -->
+        <aside>
 
-        <h2>🎓 Educação</h2>
-        <p><strong>Análise e Desenvolvimento de Sistemas</strong><br>
-        Universidade Cruzeiro do Sul (2023 – 2025)</p>
+            <!-- Habilidades -->
+            <div class="card fade-in">
+                <div class="card-title">🛠 Habilidades</div>
+
+                <div class="tag-group">
+                    <div class="tag-group-label">Linguagens</div>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag blue">Java</span>
+                        <span class="tag blue">HTML5</span>
+                        <span class="tag blue">CSS3</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <div class="tag-group-label">Frameworks &amp; Libs</div>
+                    <div class="tags">
+                        <span class="tag green">Flutter</span>
+                        <span class="tag green">React</span>
+                        <span class="tag green">Django</span>
+                        <span class="tag green">Node.js</span>
+                        <span class="tag green">Express</span>
+                        <span class="tag green">Streamlit</span>
+                        <span class="tag green">Bootstrap</span>
+                        <span class="tag green">LangChain</span>
+                        <span class="tag green">BeautifulSoup</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <div class="tag-group-label">IA &amp; Machine Learning</div>
+                    <div class="tags">
+                        <span class="tag orange">TensorFlow</span>
+                        <span class="tag orange">PyTorch</span>
+                        <span class="tag orange">LangChain</span>
+                        <span class="tag orange">OpenAI API</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <div class="tag-group-label">Bancos de Dados</div>
+                    <div class="tags">
+                        <span class="tag pink">MongoDB</span>
+                        <span class="tag pink">MySQL</span>
+                        <span class="tag pink">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="tag-group">
+                    <div class="tag-group-label">DevOps &amp; Ferramentas</div>
+                    <div class="tags">
+                        <span class="tag">Docker</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Selenium</span>
+                        <span class="tag">RPA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cloud -->
+            <div class="card fade-in">
+                <div class="card-title">☁️ Cloud</div>
+                <div class="cloud-grid">
+                    <span class="cloud-item"><span class="ci">🌐</span> Google Cloud</span>
+                    <span class="cloud-item"><span class="ci">🔷</span> Azure</span>
+                    <span class="cloud-item"><span class="ci">🟠</span> AWS</span>
+                </div>
+            </div>
+
+            <!-- MERN Stack -->
+            <div class="card fade-in">
+                <div class="card-title">⚡ MERN Stack</div>
+                <div class="cloud-grid">
+                    <span class="cloud-item"><span class="ci">🍃</span> MongoDB</span>
+                    <span class="cloud-item"><span class="ci">🚂</span> Express</span>
+                    <span class="cloud-item"><span class="ci">⚛️</span> React</span>
+                    <span class="cloud-item"><span class="ci">🟢</span> Node.js</span>
+                </div>
+            </div>
+
+            <!-- Educação -->
+            <div class="card fade-in">
+                <div class="card-title">🎓 Educação</div>
+                <div class="edu-item">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-info">
+                        <div class="degree">Análise e Desenvolvimento de Sistemas</div>
+                        <div class="school">Universidade Cruzeiro do Sul</div>
+                        <div class="period">2023 – 2025</div>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- ── RIGHT MAIN CONTENT ────────────────────── -->
+        <main>
+
+            <!-- Experiência -->
+            <div class="card fade-in">
+                <div class="card-title">💼 Experiência</div>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-date">2023 – 2025</div>
+                        <div class="tl-role">Desenvolvedor Freelancer</div>
+                        <div class="tl-org">Projetos Independentes &amp; Universitários</div>
+                        <ul class="tl-desc">
+                            <li>Desenvolvi aplicações web e mobile com Python, Flutter e React.</li>
+                            <li>Criei automações RPA utilizando Python e Selenium para redução de tarefas manuais.</li>
+                            <li>Implementei agentes de IA e pipelines com LangChain e OpenAI API.</li>
+                            <li>Construí dashboards interativos e data apps com Streamlit.</li>
+                            <li>Projetei e mantive bancos de dados relacionais e NoSQL (MySQL, MongoDB, Firebase).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projetos -->
+            <div class="card fade-in">
+                <div class="card-title">🚀 Projetos em Destaque</div>
+                <div class="projects-grid">
+
+                    <div class="proj-card">
+                        <div class="proj-icon">🤖</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/langchain_ask_images" target="_blank" rel="noopener">Agentes de IA</a></div>
+                        <div class="proj-desc">Agentes inteligentes em Python com LangChain para análise de imagens e perguntas em linguagem natural.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">LangChain</span>
+                            <span class="proj-tag">OpenAI</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">⚙️</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/RPA_Automacao" target="_blank" rel="noopener">Automação RPA</a></div>
+                        <div class="proj-desc">Automação de processos empresariais com Python e Selenium, eliminando tarefas repetitivas.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">Selenium</span>
+                            <span class="proj-tag">RPA</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">📊</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/langchain_ask_images" target="_blank" rel="noopener">Dashboard de Dados</a></div>
+                        <div class="proj-desc">Dashboard interativo para visualização de dados e insights com Streamlit.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">Streamlit</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">📡</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/app_broadcasting_flutter" target="_blank" rel="noopener">App Broadcasting</a></div>
+                        <div class="proj-desc">Aplicativo Flutter com transmissão de dados em tempo real e gerenciamento de estado.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Dart</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">₿</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/bitcoim_price_flutter" target="_blank" rel="noopener">Bitcoin Price</a></div>
+                        <div class="proj-desc">Consulta em tempo real do preço do Bitcoin com integração a APIs de criptomoedas.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">API REST</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">⛽</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/calcula_fuel_flutter" target="_blank" rel="noopener">Calcula Fuel</a></div>
+                        <div class="proj-desc">Calculadora inteligente para decidir entre álcool e gasolina com base nos preços atuais.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Dart</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">🗣️</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/aprenda_ingles_flutter" target="_blank" rel="noopener">Aprenda Inglês</a></div>
+                        <div class="proj-desc">App educativo para aprender inglês com frases do dia a dia, ideal para iniciantes.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Dart</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-icon">✈️</div>
+                        <div class="proj-title"><a href="https://github.com/emersonnjsantos/amanhecer_turismo_agencia" target="_blank" rel="noopener">Agência de Turismo</a></div>
+                        <div class="proj-desc">Aplicativo completo para agência de turismo desenvolvido em Flutter com UI moderna.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Flutter</span>
+                            <span class="proj-tag">Dart</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
     </div>
+
+    <!-- ══ FOOTER ═════════════════════════════════════════ -->
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/emersonnjsantos" target="_blank" rel="noopener">Emerson N J Santos</a> · 2025</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(
+            entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+            { threshold: 0.1 }
+        );
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
