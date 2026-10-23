@@ -13,36 +13,55 @@
     const $ = (sel, root = document) => root.querySelector(sel);
     const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+    /* ---------- Badges Shields.io ---------- */
+    // [nome, cor da marca (hex), logo do simple-icons ('' = sem logo), cor do logo]
+    const badgeUrl = (label, color, logo = '', logoColor = 'white', style = 'for-the-badge') => {
+        const safe = encodeURIComponent(label.replace(/-/g, '--').replace(/_/g, '__'));
+        const params = new URLSearchParams({ style });
+        if (logo) { params.set('logo', logo); params.set('logoColor', logoColor); }
+        return `https://img.shields.io/badge/${safe}-${color}?${params}`;
+    };
+    const badgeImg = (b, style = 'for-the-badge') =>
+        `<img class="badge-img" src="${badgeUrl(b[0], b[1], b[2], b[3], style)}" alt="${b[0]}" loading="lazy" height="${style === 'flat-square' ? 20 : 28}">`;
+
     /* ---------- Dados: habilidades (extraídas do README) ---------- */
     const SKILLS = {
         'Linguagens': [
-            ['Python', 'devicon-python-plain'], ['JavaScript', 'devicon-javascript-plain'],
-            ['Java', 'devicon-java-plain'], ['Dart', 'devicon-dart-plain'],
-            ['HTML5', 'devicon-html5-plain'], ['CSS3', 'devicon-css3-plain'],
+            ['Python', '3776AB', 'python'], ['JavaScript', 'F7DF1E', 'javascript', 'black'],
+            ['Java', 'ED8B00', 'openjdk'], ['Dart', '0175C2', 'dart'],
+            ['HTML5', 'E34F26', 'html5'], ['CSS3', '1572B6', 'css'],
         ],
         'IA & Dados': [
-            ['TensorFlow', 'devicon-tensorflow-original'], ['PyTorch', 'devicon-pytorch-original'],
-            ['LangChain', 'bi bi-link-45deg'], ['Streamlit', 'bi bi-bar-chart-line'],
-            ['BeautifulSoup', 'bi bi-code-slash'],
+            ['TensorFlow', 'FF6F00', 'tensorflow'], ['PyTorch', 'EE4C2C', 'pytorch'],
+            ['LangChain', '1C3C3C', 'langchain'], ['Streamlit', 'FF4B4B', 'streamlit'],
+            ['BeautifulSoup', '59666C'],
         ],
         'Frameworks': [
-            ['Flutter', 'devicon-flutter-plain'], ['React', 'devicon-react-original'],
-            ['Django', 'devicon-django-plain'], ['Bootstrap', 'devicon-bootstrap-plain'],
-            ['Node.js', 'devicon-nodejs-plain'], ['Express', 'devicon-express-original'],
+            ['Flutter', '02569B', 'flutter'], ['React', '20232A', 'react', '61DAFB'],
+            ['Django', '092E20', 'django'], ['Bootstrap', '7952B3', 'bootstrap'],
+            ['Node.js', '339933', 'nodedotjs'], ['Express', '000000', 'express'],
         ],
         'Bancos de Dados': [
-            ['MongoDB', 'devicon-mongodb-plain'], ['MySQL', 'devicon-mysql-plain'],
-            ['Firebase', 'devicon-firebase-plain'],
+            ['MongoDB', '47A248', 'mongodb'], ['MySQL', '4479A1', 'mysql'],
+            ['Firebase', 'FFCA28', 'firebase', 'black'],
         ],
         'Cloud & DevOps': [
-            ['Docker', 'devicon-docker-plain'], ['Google Cloud', 'devicon-googlecloud-plain'],
-            ['Azure', 'devicon-azure-plain'], ['AWS', 'devicon-amazonwebservices-plain-wordmark'],
-            ['GitHub', 'devicon-github-original'],
+            ['Docker', '2496ED', 'docker'], ['Google Cloud', '4285F4', 'googlecloud'],
+            ['Azure', '0078D4'], ['AWS', 'FF9900'],
+            ['GitHub', '181717', 'github'],
         ],
         'Ferramentas': [
-            ['IntelliJ IDEA', 'devicon-intellij-plain'], ['Sublime Text', 'devicon-sublimetext-plain'],
-            ['Anaconda', 'devicon-anaconda-original'],
+            ['IntelliJ IDEA', '000000', 'intellijidea'], ['Sublime Text', 'FF9800', 'sublimetext'],
+            ['Anaconda', '44A833', 'anaconda'], ['Selenium', '43B02A', 'selenium'],
         ],
+    };
+
+    // Badge da linguagem principal de cada projeto
+    const LANG_BADGES = {
+        Python: ['Python', '3776AB', 'python'], Dart: ['Dart', '0175C2', 'dart'],
+        JavaScript: ['JavaScript', 'F7DF1E', 'javascript', 'black'], HTML: ['HTML5', 'E34F26', 'html5'],
+        CSS: ['CSS3', '1572B6', 'css'], Java: ['Java', 'ED8B00', 'openjdk'],
+        TypeScript: ['TypeScript', '3178C6', 'typescript'], PHP: ['PHP', '777BB4', 'php'],
     };
 
     /* ---------- Dados: projetos de fallback (README) ---------- */
@@ -70,13 +89,13 @@
 
     /* ---------- Tema claro/escuro ---------- */
     const root = document.documentElement;
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('theme-v2');
     if (savedTheme) root.setAttribute('data-bs-theme', savedTheme);
     $('#themeToggle').addEventListener('click', () => {
         const next = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-bs-theme', next);
-        localStorage.setItem('theme', next);
-        document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0c0c0e' : '#f7f5f1';
+        localStorage.setItem('theme-v2', next);
+        document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#0b0b14' : '#ffffff';
     });
 
     /* ---------- Efeito de digitação ---------- */
@@ -103,8 +122,7 @@
     let totalTech = 0;
     skillsGrid.innerHTML = Object.entries(SKILLS).map(([group, items]) => {
         totalTech += items.length;
-        const chips = items.map(([name, icon]) =>
-            `<li class="skill-chip"><i class="${icon}"></i>${name}</li>`).join('');
+        const chips = items.map(b => `<li>${badgeImg(b)}</li>`).join('');
         return `<div class="col-md-6 col-lg-4 reveal">
                     <div class="skill-card"><h3>${group}</h3><ul class="skill-list">${chips}</ul></div>
                 </div>`;
@@ -164,7 +182,9 @@
                     <p>${escapeHtml(p.desc)}</p>
                     <div class="project-meta">
                         <span class="project-tag cat">${CATEGORIES[p.cat]}</span>
-                        ${p.lang ? `<span class="project-tag">${escapeHtml(p.lang)}</span>` : ''}
+                        ${p.lang ? (LANG_BADGES[p.lang]
+                            ? badgeImg(LANG_BADGES[p.lang], 'flat-square')
+                            : `<span class="project-tag">${escapeHtml(p.lang)}</span>`) : ''}
                         ${p.stars ? `<span><i class="bi bi-star-fill"></i> ${p.stars}</span>` : ''}
                     </div>
                 </a>
